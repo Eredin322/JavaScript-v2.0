@@ -26,3 +26,32 @@ console.log(b);
 
 let bArr = Array.from(b);
 console.log(bArr);
+
+
+
+
+
+
+let stroka = "1234545"; // основная строка
+function f() {
+    let myset = new Set(stroka); // set = 12345
+    let bukvi = {} // ассоциативный массив = объект счетчик
+
+    for (let item of myset ) { /* перебираем set */
+        let counter = 0; /* счетчик символов */
+
+        for (let i = 0; i < stroka.length; i++) { /* каждый раз пребираем всю строку */
+            if ( stroka[ i ] === item) {
+                counter++; // крутим счет если есть такой символ
+            };
+        }
+
+        bukvi [ item ] = counter; /* добвляем результат [ символ ] = кол-во */
+    }
+
+    alert(bukvi[item]); // символы и их количество
+    }
+
+    document.querySelector('.b').onclick = () => {
+        console.log(f());
+}
