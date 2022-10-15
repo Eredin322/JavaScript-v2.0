@@ -33,7 +33,8 @@ document.querySelector('.b-1').onclick = () => {
 let a2 = [2,3,4,5,10,11,12];
 
 function t2() {
-
+    a2_res = a2.map(item => item ** 2)
+    return a2_res
 }
 
 document.querySelector('.b-2').onclick = () => {
@@ -48,7 +49,21 @@ document.querySelector('.b-2').onclick = () => {
 let a3 = [4,"3",6,7,"12",34,"56",78,90,11];
 
 function t3() {
+    // a3_res = a3.filter((item) => {
+    //     if(typeof item == 'number'){
+    //         return item;
+    //     }
+    // })
+    // return a3_res;
 
+    a3_res = a3.map((item) => {
+        if(typeof item !== 'number'){
+            return +item
+        } else {
+            return item
+        }
+    })
+    return a3_res
 }
 
 document.querySelector('.b-3').onclick = () => {
@@ -62,7 +77,12 @@ document.querySelector('.b-3').onclick = () => {
 let a4 = [4,"3",6,7,"12",34,"56",78,90,11];
 
 function t4() {
-
+    let out = a4.map(item => {
+        if(typeof item == 'number'){
+            a4_res.push(item)
+        }
+    })
+    return a4_res
 }
 
 document.querySelector('.b-4').onclick = () => {
@@ -77,7 +97,12 @@ document.querySelector('.b-4').onclick = () => {
 let b1 = [3, 14, 15, 92];
 
 function t5() {
-
+    b1_res = b1.filter(item => {
+        if(item % 2 == 0){
+            return item
+        }
+    })
+    return b1_res
 }
 
 document.querySelector('.b-5').onclick = () => {
@@ -92,7 +117,12 @@ document.querySelector('.b-5').onclick = () => {
 let b6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t6() {
-
+    b6_res = b6.filter(item =>{
+        if(typeof item == 'number'){
+            return item
+        }
+    })
+    return b6_res
 }
 
 document.querySelector('.b-6').onclick = () => {
@@ -106,7 +136,12 @@ document.querySelector('.b-6').onclick = () => {
 let b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32];
 
 function t7() {
-
+    b7_res = b7.filter(item => {
+        if(typeof item == 'string' && item.length > 3){
+            return item
+        }
+    })
+    return b7_res
 }
 
 document.querySelector('.b-7').onclick = () => {
@@ -119,7 +154,12 @@ document.querySelector('.b-7').onclick = () => {
 let b8 = [3, 14, 15, 92, "6", "5", "hello", 32];
 
 function t8() {
-
+    b8.filter((item, index) => {
+        if(item % 2 === 0){
+            b8_res.push(index)
+        }
+    })
+    return b8_res
 }
 
 document.querySelector('.b-8').onclick = () => {
@@ -134,7 +174,13 @@ document.querySelector('.b-8').onclick = () => {
 let b9 = [3, "hello", 4, "world", 5, "hi"];
 
 function t9() {
-
+    b9.filter(item => {
+        if (typeof item == 'number'){
+            b9_num.push(item)
+        } else if(typeof item == 'string'){
+            b9_string.push(item)
+        }
+    })
     return [b9_num, b9_string];
 }
 
@@ -150,8 +196,14 @@ document.querySelector('.b-9').onclick = () => {
 let b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]]
 
 function t10() {
-
-
+    b10_res = b10.filter(item =>{
+        for(let i = 0; i < item.length; i++){
+            if(item[i] === 3){
+                return item
+            }
+        }
+    })
+    return b10_res
 }
 
 document.querySelector('.b-10').onclick = () => {
