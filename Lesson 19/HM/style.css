@@ -1,4 +1,4 @@
-.container  {
+.container {
     width: 100%;
 }
 
@@ -21,4 +21,10 @@ section {
 
 .hide {
     display: none;
+}
+
+.div-19 div {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
 }
