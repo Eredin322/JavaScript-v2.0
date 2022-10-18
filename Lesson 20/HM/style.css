@@ -1,4 +1,4 @@
-.container  {
+.container {
     width: 100%;
 }
 
@@ -21,4 +21,24 @@ section {
 
 .hide {
     display: none;
+}
+
+.keyboard {
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+ul li {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.active {
+    border: 2px solid blue;
 }
