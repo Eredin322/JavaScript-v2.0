@@ -162,3 +162,7 @@ function prevFunction() {
 
 
 // ваше событие здесь!!!
+let a = document.createElement('div');
+a.innerHTML = 'OMGLOLOHMYGOD';
+
+document.querySelector('.out-11').appendChild(a);
