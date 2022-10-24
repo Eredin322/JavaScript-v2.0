@@ -30,14 +30,14 @@ function t2() {
             myFunction(this.responseText);
         }
     }
-    xhttp.open('GET','https://iluha-bandit.ru/index2.php', true);
-    xhttp.send('?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=ILUHA');
+    xhttp.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=ILUHA', true);
+    xhttp.send('');
 
     function myFunction(data){
         out.innerHTML = data; 
     }
 }
-document.querySelector('b-2').onclick = t2;
+document.querySelector('.b-2').onclick = t2;
 // ваше событие здесь!!!
 
 
@@ -52,14 +52,14 @@ function t3() {
             myFunction(this.responseText);
         }
     }
-    xhttp.open('GET','https://iluha-bandit.ru/index2.php', true);
-    xhttp.send('?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=2&num2=2');
+    xhttp.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num1=2&num2=15', true);
+    xhttp.send('');
 
     function myFunction(data){
         out.innerHTML = data; 
     }
 }
-document.querySelector('b-3').innerHTML = t3;
+document.querySelector('.b-3').onclick = t3;
 // ваше событие здесь!!!
 
 
@@ -75,14 +75,14 @@ function t4() {
         }
     }
 
-    xhttps.open('GET','https://iluha-bandit.ru/index2.php', true);
-    xhttps.send('?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=2&num2=6');
+    xhttps.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num1=2&num2=6', true);
+    xhttps.send('');
 
     function myFunction(data){
         out.innerHTML = data;
     }
 }
-document.querySelector('b-4').innerHTML = t4;
+document.querySelector('.b-4').onclick = t4;
 // ваше событие здесь!!!
 
 // Task 5 ============================================
@@ -92,19 +92,19 @@ function t5() {
     let out = document.querySelector('.out-5');
     const xhttps = new XMLHttpRequest();
     xhttps.onreadystatechange = function(){
-        if(this.readystate == 4 && this.status == 200){
+        if(this.readyState == 4 && this.status == 200){
             myFunction(this.responseText);
         }
     }
 
-    xhttps.open('GET','https://iluha-bandit.ru/index2.php', true);
-    xhttps.send('?auth=zhrgB3DxC8LoG7Gcilzg&action=5');
+    xhttps.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5', true);
+    xhttps.send('');
 
     function myFunction(data){
         out.innerHTML = data;
     }
 }
-document.querySelector('b-5').innerHTML = t5;
+document.querySelector('.b-5').onclick = t5;
 // ваше событие здесь!!!
 
 // Task 6 ============================================
@@ -114,19 +114,19 @@ function t6() {
     let out = document.querySelector('.out-6');
     const xhttps = new XMLHttpRequest();
     xhttps.onreadystatechange = function (){
-        if(this.readystate == 4 && this.status == 200){
+        if(this.readyState == 4 && this.status == 200){
             myFunction(this.responseText);
         }
-    }git
+    }
 
-    xhttps.open();
+    xhttps.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=8&num2=11');
     xhttps.send();
 
     function myFunction(data){
         out.innerHTML = data;
     }
 }
-document.querySelector('b-6').innerHTML = t6;
+document.querySelector('.b-6').onclick = t6;
 // ваше событие здесь!!!
 
 
@@ -134,18 +134,45 @@ document.querySelector('b-6').innerHTML = t6;
 /*  Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-7 результат. Запускаться функция должна по нажатию b-7. */
 
 function t7() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-7');
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
 
+    xhttp.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7');
+    xhttp.send();
+    function myFunction(data){
+        let img = document.createElement('img');
+        img.setAttribute('src', data);
+        out.appendChild(img);
+    }
 }
-document.querySelector('b-7').innerHTML = t7;
+document.querySelector('.b-7').onclick = t7;
 // ваше событие здесь!!!
 
 // Task 8 ============================================
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-8 результат. Запускаться функция должна по нажатию b-8.*/
 
 function t8() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-8');
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
 
+    xhttp.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data; 
+    }
 }
-document.querySelector('b-8').innerHTML = t8;
+document.querySelector('.b-8').onclick = t8;
 // ваше событие здесь!!!
 
 
@@ -153,9 +180,23 @@ document.querySelector('b-8').innerHTML = t8;
 /* Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-9 результат. Запускаться функция должна по нажатию b-9. */
 
 function t9() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-9');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('GET','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=9&m=1&d=1&y=1');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-9').innerHTML = t9;
+document.querySelector('.b-9').onclick = t9;
 // ваше событие здесь!!!
 
 
@@ -165,78 +206,206 @@ document.querySelector('b-9').innerHTML = t9;
 */
 
 function t10() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-10');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=1');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-10').innerHTML = t10;
+document.querySelector('.b-10').onclick = t10;
 // Task 11 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице. Если все сделано верно, сервер пришлет строку hello ваше имя. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-11 результат. Запускаться функция должна по нажатию b-11. */
 
 function t11() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-11');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=2&name=Илюха');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-11').innerHTML = t11;
+document.querySelector('.b-11').onclick = t11;
 // ваше событие здесь!!!
 
 // Task 12 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-12 результат. Запускаться функция должна по нажатию b-12.*/
 
 function t12() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-12');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=3&num=1&num2=5');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-12').innerHTML = t12;
+document.querySelector('.b-12').onclick = t12;
 // ваше событие здесь!!!
 
 // Task 13 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет случайное число в заданном диапазоне. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-13 результат. Запускаться функция должна по нажатию b-13.*/
 
 function t13() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-13');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=4&num=1&num2=5');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-13').innerHTML = t13;
+document.querySelector('.b-13').onclick = t13;
 // ваше событие здесь!!!
 
 // Task 14 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-14 результат. Запускаться функция должна по нажатию b-14.*/
 
 function t14() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-14');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=5');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-14').innerHTML = t14;
+document.querySelector('.b-14').onclick = t14;
 // ваше событие здесь!!!
 
 // Task 15============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-15 результат. Запускаться функция должна по нажатию b-15. */
 
 function t15() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-15');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=6&num1=112&num2=14');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-15').innerHTML = t15;
+document.querySelector('.b-15').onclick = t15;
 // ваше событие здесь!!!
 
 // Task 16 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-16 результат. Запускаться функция должна по нажатию b-16. */
 
 function t16() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-16');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=7&num1=112&num2=14');
+    xhttp.send();
+
+    function myFunction(data){
+        let img = document.createElement('img');
+        img.setAttribute('src', data);
+        out.before(img);
+    }
 }
-document.querySelector('b-16').innerHTML = t16;
+document.querySelector('.b-16').onclick = t16;
 // ваше событие здесь!!!
 
 // Task 17 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения. Если все правильно сервер вернет ваш возраст. Не забывайте указывать параметр auth (ключ в чате).Выведите в out-17 результат. Запускаться функция должна по нажатию b-17. */
 
 function t17() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-17');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=8&year=2000');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-17').innerHTML = t17;
+document.querySelector('.b-17').onclick = t17;
 // ваше событие здесь!!!
 
 // Task 18 ============================================
 /*  Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1. Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в out-18 результат. Запускаться функция должна по нажатию b-18. */
 
 function t18() {
+    let xhttp = new XMLHttpRequest();
+    let out = document.querySelector('.out-18');
 
+    xhttp.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            myFunction(this.responseText);
+        }
+    }
+
+    xhttp.open('POST','https://iluha-bandit.ru/index2.php?auth=zhrgB3DxC8LoG7Gcilzg&action=9&m=1&d=1&y=1');
+    xhttp.send();
+
+    function myFunction(data){
+        out.innerHTML = data;
+    }
 }
-document.querySelector('b-18').innerHTML = t18;
+document.querySelector('.b-18').onclick = t18;
 // ваше событие здесь!!!
 
